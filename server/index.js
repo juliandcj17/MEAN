@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const morgan = require('morgan')
-    //const { mongoose } = require('./database')
+const { mongoose } = require('./database')
 
 // settings
 app.set('port', process.env.PORT || 3000)
@@ -12,7 +12,7 @@ app.use(morgan('dev'));
 app.use(express.json());
 
 // Routes /api/employees
-app.use(require('./routes/employee.routes'))
+app.use('/api/employees', require('./routes/employee.routes'))
 
 //staring server
 app.listen(app.get('port'), () => {

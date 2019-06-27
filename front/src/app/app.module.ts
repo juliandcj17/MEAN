@@ -4,19 +4,18 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { EmployeesComponent } from './employees/employees.component';
-import { helloWorld } from './primercomponente/primer.components';
 import { HolaMundoComponent } from './hola-mundo/hola-mundo.component';
-
+import { FormsModule }from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
     EmployeesComponent,
-    helloWorld,
     HolaMundoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
